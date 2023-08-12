@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title style="background-color: lightblue">Love Calculator</title>
+    <style>
+      .userSection {
+        padding: 10px;
+        border: 1px solid grey;
+      }
+      .control {
+        padding: 10px;
+      }
+      .txtbox {
+        padding: 4px;
+        border-radius: 4px;
+        margin: 4px;
+        border: 1px solid yellow;
+      }
+      .btn {
+        background: lightblue;
+        border-radius: 3px;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+      }
+      body {
+        background-image: url("taj.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+      }
+      #userOutput {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h1 style="font-size: 300%">
+          Love can't be a friendship but friendship can be love
+        </h1>
+      </div>
+    </section>
+    <section id="userInput" class="userSection">
+      <div class="control">
+        <label>Your Name</label>
+        <input id="txtfname" class="txtbox" type="text" value="" />
+      </div>
+      <div class="control">
+        <label>Patner Name</label>
+        <input id="txtlname" class="txtbox" type="text" value="" />
+      </div>
+      <div class="control">
+        <button onclick="getUserData();" class="btn">submit</button>
+      </div>
+    </section>
+    <section id="userOutput" class="userSection">
+      User Details
+      <p>Really he is your lover</p>
+      <p id="pUserName"></p>
+      <div class="control">
+        <button onclick="goBack();" class="btn">Back</button>
+      </div>
+    </section>
+    <script>
+      var fname = document.getElementById("txtfname");
+      var lname = document.getElementById("txtlname");
+      var UserName = document.getElementById("pUserName");
+      var secUserInut = document.getElementById("userInput");
+      var secUserOput = document.getElementById("userOutput");
+      function getUserData() {
+        var fstName = fname.value;
+        var lstName = lname.value;
+        if (fstName !== "" && lstName !== "") {
+          UserName.innerHTML =
+            "sarly me idhari love just 60% matrame" +
+            " " +
+            fstName +
+            " " +
+            "and" +
+            " " +
+            lstName +
+            " " +
+            "Only Prasanth can love 100%";
+          secUserInut.style.display = "none";
+          secUserOput.style.display = "block";
+        }
+      }
+      function goBack() {
+        secUserInut.style.display = "block";
+        secUserOput.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
